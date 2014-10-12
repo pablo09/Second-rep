@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+    
+    <h:head>
+        <title>Car Website</title>
+    </h:head>
+    <h:form>
+        <h1>Welcome to Pawel Zeszko's website about cars</h1>
+        <p:messages id="msgs"></p:messages>
+        <p:outputLabel value="Login"></p:outputLabel><br></br>
+        <h:inputText value="#{loginBean.name}"></h:inputText> <br></br>
+        <p:outputLabel value="Password"></p:outputLabel><br></br>
+        <h:inputSecret value="#{loginBean.pass}"></h:inputSecret> <br></br>
+        <p:commandButton value="Log in" action="#{loginBean.authentificate}" update="msgs"></p:commandButton>
+        <p:commandButton value="Test" action="#{carBean.someMethod}" ></p:commandButton>
+    </h:form>
+</html>
+
